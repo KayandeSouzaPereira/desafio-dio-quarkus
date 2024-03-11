@@ -10,6 +10,7 @@ import org.jboss.resteasy.reactive.RestResponse;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.awt.print.Pageable;
 import java.util.List;
 
 @Produces(MediaType.APPLICATION_JSON)
@@ -41,4 +42,20 @@ public class CandidateResource {
     public List<Candidate> list(){
         return api.list();
     }
+
+    @GET
+    @Path("/page{page}/limit{limit}")
+    @ResponseStatus(RestResponse.StatusCode.OK)
+    public List<Candidate> list(@PathParam("page")Integer page, @PathParam("limit")Integer limit){
+        return api.listPagination(page, limit);
+    }
+
+    @DELETE
+    @Path("/{id}")
+    @ResponseStatus(RestResponse.StatusCode.OK)
+    public void delete(@PathParam("id") String id){
+        api.delete(id);
+    }
+
+
 }

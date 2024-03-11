@@ -6,14 +6,15 @@ import javax.persistence.Entity;
 @Entity(name = "election_candidate")
 public class ElectionCandidate {
     @EmbeddedId
-    private ElectionCandidadeteId id;
+    private ElectionCandidateId id;
+
     private Integer votes;
 
-    public ElectionCandidadeteId getId() {
+    public ElectionCandidateId getId() {
         return id;
     }
 
-    public void setId(ElectionCandidadeteId id) {
+    public void setId(ElectionCandidateId id) {
         this.id = id;
     }
 
@@ -25,12 +26,12 @@ public class ElectionCandidate {
         this.votes = votes;
     }
 
-    public static ElectionCandidate fromDomain(domain.Election election, domain.Candidate candidate, Integer votes){
+    public static ElectionCandidate fromDomain(domain.Election election, domain.Candidate candidate, Integer votes) {
         ElectionCandidate entity = new ElectionCandidate();
 
-        ElectionCandidadeteId id = new ElectionCandidadeteId();
+        ElectionCandidateId id = new ElectionCandidateId();
         id.setElectionId(election.id());
-        id.setCandidateId(id.getCandidateId());
+        id.setCandidateId(candidate.id());
 
         entity.setId(id);
         entity.setVotes(votes);

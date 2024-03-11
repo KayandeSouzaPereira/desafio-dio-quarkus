@@ -1,6 +1,9 @@
 package domain;
 
+import com.google.api.Page;
+
 import javax.enterprise.context.ApplicationScoped;
+import java.awt.print.Pageable;
 import java.util.List;
 
 @ApplicationScoped
@@ -18,9 +21,13 @@ public class CandidateService {
     public List<Candidate> findAll() {
         return repository.findAll();
     }
-
     public Candidate findById(String id) {
         return repository.findById(id).orElseThrow();
+    }
+
+
+    public void delete(String id){
+        repository.delete(id);
     }
 
 

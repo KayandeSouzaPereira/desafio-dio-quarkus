@@ -12,7 +12,8 @@ public record Election(String id, List<Candidate> candidates) {
                             String fullName,
                             String email,
                             Optional<String> phone,
-                            Optional<String> jobTitle, Integer votes) {
+                            Optional<String> jobTitle,
+                            Integer votes) {
     }
     public static Election fromDomain(domain.Election election){
         var candidates = election.votes()
@@ -20,11 +21,12 @@ public record Election(String id, List<Candidate> candidates) {
                             .stream()
                 .map(entry -> new Candidate(entry.getKey().id(),
                                             entry.getKey().photo(),
-                                            entry.getKey().givenName()
+                                            entry.getKey().givenName() + " " + entry.getKey().familyName() ,
                                             entry.getKey().email(),
+                                            entry.getKey().phone(),
                                             entry.getKey().jobTitle(),
                                             entry.getValue()))
-                .tolist();
+                .toList();
 
         return new Election(election.id(), candidates);
     }

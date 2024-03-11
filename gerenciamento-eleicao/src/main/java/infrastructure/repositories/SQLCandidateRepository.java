@@ -31,6 +31,17 @@ public class SQLCandidateRepository implements CandidateRepository {
     }
 
     @Override
+    @Transactional
+    public void delete(String id){
+        infrastructure.repositories.entities.Candidate candidateEntity = entityManager.find(infrastructure.repositories.entities.Candidate.class, id);
+        try {
+            entityManager.remove(candidateEntity);
+        } catch (Exception e){
+        }
+
+    }
+
+    @Override
     public List<Candidate> find(CandidateQuery query) {
         var cb = entityManager.getCriteriaBuilder();
         var cq = cb.createQuery(infrastructure.repositories.entities.Candidate.class);
