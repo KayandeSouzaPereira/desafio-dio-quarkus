@@ -1,3 +1,88 @@
+readme.so logo
+
+dark
+Download
+SeçõesReset
+
+Delete
+Clique em uma seção abaixo para editar os conteúdos
+
+
+
+
+Clique em uma seção abaixo para adicioná-la ao seu readme
+Search for a section
+
+Seção customizada
+
+Referência
+
+Documentação da API
+
+Apêndice
+
+Etiquetas
+
+Documentação de cores
+
+Contribuindo
+
+Demonstração
+
+Deploy
+
+Documentação
+
+Variáveis de Ambiente
+
+FAQ
+
+Funcionalidades
+
+Feedback
+
+Perfil do GitHub - Sobre mim
+
+Perfil do GitHub - Introdução
+
+Perfil do GitHub - Links
+
+Perfil do GitHub - Outros
+
+Perfil do GitHub - Habilidades
+
+Aprendizados
+
+Licença
+
+Logo
+
+Melhorias
+
+Relacionados
+
+Roadmap
+
+Rodando localmente
+
+Screenshots
+
+Suporte
+
+Rodando os testes
+
+Uso/Exemplos
+
+Usado por
+Editor
+Além também foram adicionados os seguintes elementos:
+
+[ADR](https://github.com/KayandeSouzaPereira/desafio-dio-quarkus/blob/e51a2b0b0ab81c527ab6bfc7f78dbe678093ac09/ADR-Desafio-Dio-Quarks.pdf) - Architecture Decision Record. 
+
+[Threat Modeling](https://github.com/KayandeSouzaPereira/desafio-dio-quarkus/blob/e51a2b0b0ab81c527ab6bfc7f78dbe678093ac09/Modelagem-de-Ameacas.pdf) - Modelagem de Ameaças.
+Pré-visualização
+Código fonte
+
 
 # Desafio do Quarkus Framework
 
@@ -59,8 +144,17 @@ Para rodar o projeto no ambiente de container utilize:
 ## Documentação
 
 A documentação Swagger pode ser encontrada ao iniciar o projeto como dev pelo endpoint `/q/swagger-ui`.
+
+
+## Adicionais
+
+Alguns elementos foram adicionados ao projeto, o termino da implementação de CRUD nas requisições de candidatos com os itens de DELETE e GET com paginação. 
+Além também foram adicionados os seguintes elementos:
+
+[ADR](https://github.com/KayandeSouzaPereira/desafio-dio-quarkus/blob/e51a2b0b0ab81c527ab6bfc7f78dbe678093ac09/ADR-Desafio-Dio-Quarks.pdf) - Architecture Decision Record. 
+
+[Threat Modeling](https://github.com/KayandeSouzaPereira/desafio-dio-quarkus/blob/e51a2b0b0ab81c527ab6bfc7f78dbe678093ac09/Modelagem-de-Ameacas.pdf) - Modelagem de Ameaças.
 ## Autores
 
 - [@kayandesouza](https://github.com/KayandeSouzaPereira) Desenvolvedor do App
-
 
